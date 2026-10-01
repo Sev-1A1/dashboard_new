@@ -1,0 +1,11 @@
+@media (max-width: 800px) {
+    .our-work {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .projects ul {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
