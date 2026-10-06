@@ -112,11 +112,11 @@ body {
   }
   .get-in-touch-below {
     padding: 0.2rem 1rem;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align: center;
     margin-top: 1rem;
     position: absolute;
-    top: 65%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
   }
