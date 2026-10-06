@@ -1,5 +1,13 @@
-        const navLinks = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('#intro, #what-we-do, #our-work, #footer');
+        const navLinks = document.querySelectorAll('nav a, .footer-nav a');
+        const sections = document.querySelectorAll('#intro, #what-we-do, #our-work');
+        const footer = document.querySelector('#footer');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbar = document.querySelector('.navbar');
+
+        menuToggle?.addEventListener('click', () => {
+            const isOpen = navbar.classList.toggle('menu-open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
 
         const setActiveLink = (sectionId) => {
             navLinks.forEach((link) => {
@@ -19,6 +27,8 @@
 
                 event.preventDefault();
                 setActiveLink(section.id);
+                navbar?.classList.remove('menu-open');
+                menuToggle?.setAttribute('aria-expanded', 'false');
                 section.scrollIntoView({ behavior: 'smooth' });
             });
         });
@@ -34,3 +44,18 @@
         });
 
         sections.forEach((section) => sectionObserver.observe(section));
+
+        let footerWasVisible = false;
+        const footerObserver = new IntersectionObserver((entries) => {
+            const footerEntry = entries[0];
+
+            if (footerEntry.isIntersecting) {
+                footerWasVisible = true;
+                setActiveLink('footer');
+            } else if (footerWasVisible) {
+                footerWasVisible = false;
+                setActiveLink('our-work');
+            }
+        });
+
+        footerObserver.observe(footer);

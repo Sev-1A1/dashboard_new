@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="reponsive.css" />
     <link rel="stylesheet" href="main.css" />
     <script src="main.js" defer></script>
     <title>Practice_Company</title>
@@ -16,7 +21,15 @@
     <header>
       <div class="navbar">
         <h1>Mappia Works</h1>
-        <nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          Menu
+        </button>
+        <nav id="primary-navigation">
           <ul>
             <li><a href="#intro">Home</a></li>
             <li><a href="#what-we-do">What we do</a></li>
@@ -40,9 +53,9 @@
               for real business
             </h2>
             <p>
-              Mappia Works is a small team that builds custom software,<br />
-              workflow solutions, and technical consulting for growing<br />
-              businesses, students, and organizations.
+              Mappia Works is a small team that builds custom software, workflow
+              solutions, and technical consulting for growing businesses,
+              students, and organizations.
             </p>
           </div>
           <button class="get-in-touch-below">Get in touch</button>

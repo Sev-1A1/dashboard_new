@@ -1,0 +1,701 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden; /* Recommended to prevent horizontal scrollbars */
+}
+
+@media (max-width: 642px) and (min-width: 320px) {
+  .intro {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .intro-text,
+  .intro-image {
+    width: 100%;
+  }
+
+  .intro-image {
+    order: -1;
+  }
+
+  header .navbar {
+    padding: 1rem;
+  }
+
+  .navbar h1 {
+    margin-left: 0;
+    font-size: 1.25rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    left: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f0f0f0;
+    border: 1px solid #000;
+  }
+
+  .navbar.menu-open nav {
+    display: flex;
+  }
+
+  .navbar nav ul {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .navbar nav .get-in-touch {
+    position: static;
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .small-intro h3 {
+    text-align: center;
+    font-size: 0.5rem;
+    white-space: nowrap;
+    margin-top: 0;
+    right: 1.4rem;
+  }
+
+  .intro-content h2 {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    right: 0.1rem;
+  }
+
+  .intro-content {
+    transform: translateY(1rem);
+  }
+
+  .intro-content p {
+    font-size: 0.5rem;
+    white-space: normal;
+    line-height: 1.2;
+    margin: 0.1rem 0;
+    text-align: center;
+    position: static;
+    width: 100%;
+  }
+  .get-in-touch-below {
+    padding: 0.2rem 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 1rem;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .intro-content p,
+  .intro-content h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .intro-image img {
+    width: 100%;
+    height: auto;
+    position: static;
+    margin: 2rem auto 0;
+    z-index: auto;
+  }
+
+  .small-wedo h3,
+  .small-wedo h4 {
+    font-size: 0.9rem;
+  }
+
+  .small-wedo p {
+    width: 100%;
+    margin-left: 0;
+    position: static;
+    bottom: auto;
+    margin-top: 5rem;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .work-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .work-list li {
+    width: 100%;
+  }
+
+  .work-list li h3,
+  .work-list li h4,
+  .work-list li p {
+    text-align: left;
+    font-size: 0.8rem;
+    margin: auto;
+  }
+
+  .our-work h3,
+  .our-work p {
+    line-height: 1.2;
+    font-size: 0.9rem;
+    position: relative;
+    top: -5rem;
+  }
+
+  .our-work p {
+    font-size: 1.3rem;
+  }
+
+  .to-projects {
+    text-align: left;
+    position: relative;
+    bottom: 5rem;
+    right: -6rem;
+    margin-top: 1rem;
+  }
+
+  .to-projects a {
+    font-size: 0.8rem;
+  }
+
+  .projects ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .projects li {
+    width: 100%;
+  }
+
+  .projects li h3,
+  .projects li p,
+  .projects li a {
+    text-align: left;
+    font-size: 0.8rem;
+    margin: auto;
+    position: relative;
+    top: -1rem;
+  }
+
+  .last-part h3 {
+    position: relative;
+    top: -1rem;
+  }
+
+  .last-part h4 {
+    position: relative;
+    top: -1rem;
+    font-size: 1.3rem;
+  }
+
+  .last-part p {
+    position: relative;
+    top: -1rem;
+    left: 0;
+    padding: auto;
+    font-size: 0.6rem;   
+    text-align: center; 
+  }
+
+  .last-part h3 {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  #footer p {
+    font-size: 0.7rem;
+    white-space: nowrap;
+    position: relative;
+    right: -2rem;
+    bottom: -2rem;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  .icons {
+    position: relative;
+    right: 6.5rem;
+    bottom: 1.7rem;
+   
+  }
+}
+
+@media (max-width: 642px) and (min-width: 375px) {
+  #primary-navigation li {
+    font-size: 0.8rem;
+    position: relative;
+    left: 2.9rem;
+  }
+
+  .intro-content h2 {
+    font-size: 1.4rem;
+    line-height: 1.1;
+    line-height: 1.1;
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+    position: relative;
+    right: 0.1rem;
+  }
+
+  .intro-content p {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.1;
+    font-size: 0.6rem;
+    margin: 0.1rem 0;
+    position: static;
+    width: 100%;
+  }
+
+  .get-in-touch-below {
+    position: relative;
+    top: 1.5rem;
+  }
+
+  .small-wedo p {
+    white-space: normal;
+    padding: auto;
+    font-size: 0.6rem;
+    text-align: left;
+    position: relative;
+    bottom: 2.5rem;
+  }
+
+  .to-projects {
+    position: relative;
+    bottom: 5rem;
+    left: 9rem;
+    margin-top: 1rem;
+  }
+
+  .icons {
+    position: relative;
+    right: 5rem;
+    bottom: 1.7rem;
+  }
+
+  #footer p {
+    font-size: 0.7rem;
+    white-space: nowrap;
+    position: relative;
+    left: 4rem;
+    bottom: -2rem;
+  }
+}
+
+@media (min-width: 425px) {
+  #footer p {
+    font-size: 0.7rem;
+    white-space: nowrap;
+    position: relative;
+    left: 5.7rem;
+    bottom: -2rem;
+  }
+
+  .to-projects {
+    position: relative;
+    bottom: 5rem;
+    left: 12.5rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 642px) {
+  .navbar h1 {
+    white-space: nowrap;
+    font-size: 1.2rem;
+  }
+
+  .navbar .get-in-touch {
+    width: 6rem;
+    height: 1.5rem;
+    position: relative;
+    right: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #primary-navigation li {
+    font-size: 0.7rem;
+    position: relative;
+    left: 2.9rem;
+  }
+
+  #primary-navigation ul {
+    gap: 1.5rem;
+  }
+
+  .navbar button.menu-toggle {
+    display: none;
+  }
+
+  .small-intro h3 {
+    font-size: 0.7rem;
+  }
+
+  .intro-content h2 {
+    font-size: 1.9rem;
+    white-space: nowrap;
+  }
+
+  .intro-content p {
+    font-size: 0.7rem;
+    white-space: normal;
+    text-align: left;
+    overflow-wrap: break-word;
+  }
+
+  .intro-image img {
+    width: 100%;
+    height: 100%;
+    position: static;
+    margin: 2rem 2rem 0;
+    z-index: auto;
+  }
+
+  .get-in-touch-below {
+    padding: 0.7rem 1.6rem;
+    font-size: 0.8rem;
+  }
+
+  .small-wedo h3 {
+    font-size: 1rem;
+  }
+
+  .small-wedo h4 {
+    font-size: 1.5rem;
+  }
+
+  .small-wedo p {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 2rem;
+  }
+
+  .work-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .work-list li {
+    width: 100%;
+  }
+
+  .our-work h3 {
+    font-size: 1.1rem;
+    position: relative;
+    top: -5rem;
+  }
+  .our-work p {
+    line-height: 1.2;
+    font-size: 1.5rem;
+    position: relative;
+    top: -5rem;
+  }
+
+  .to-projects {
+    position: relative;
+    bottom: 5rem;
+    left: 3rem;
+    margin-top: 1rem;
+  }
+
+  .to-projects a {
+    font-size: 1.5rem;
+  }
+
+  .projects ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .projects li {
+    width: 100%;
+  }
+
+  .projects li h3,
+  .projects li p,
+  .projects li a {
+    font-size: 1.1rem;
+    position: relative;
+    top: -1rem;
+  }
+
+  .last-part h3 {
+    position: relative;
+    top: -1rem;
+    font-size: 0.8rem;
+    line-height: 0.5;
+  }
+
+  .last-part h4 {
+    position: relative;
+    top: -1rem;
+    font-size: 1.5rem;
+  }
+
+  .last-part p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    position: relative;
+    top: -1rem;
+    left: 10rem;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  #footer p {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    position: relative;
+    left: -1rem;
+    top: 0.3rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 642px) {
+  #primary-navigation li {
+    font-size: 0.8rem;
+    position: relative;
+    left: 2.1rem;
+  }
+
+  #primary-navigation ul {
+    gap: 1.5rem;
+  }
+
+  .navbar button.menu-toggle {
+    display: none;
+  }
+
+  .intro-content h2 {
+    font-size: 1.8rem;
+    white-space: nowrap;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .small-wedo h3 {
+    font-size: 1.2rem;
+  }
+
+  .small-wedo h4 {
+    font-size: 1.8rem;
+  }
+
+  .small-wedo p {
+    font-size: 0.8rem;
+  }
+
+  .work-list li h3 {
+    font-size: 0.9rem;
+  }
+
+  .work-list li h4 {
+    font-size: 0.9rem;
+  }
+
+  .work-list li p {
+    font-size: 0.8rem;
+  }
+
+  .work-list li p,
+  .work-list li h3,
+  .work-list li h4 {
+    line-height: 1.1;
+  }
+
+  .our-work h3 {
+    font-size: 1.2rem;
+  }
+
+  .our-work p {
+    font-size: 1.8rem;
+  }
+
+  .to-projects a {
+    font-size: 1.2rem;
+  }
+
+  .to-projects {
+    position: relative;
+    bottom: 5rem;
+    left: 3rem;
+  }
+
+  .projects li p {
+    font-size: 1.1rem;
+  }
+
+  .last-part h3 {
+    font-size: 0.9rem;
+  }
+
+  .last-part h4 {
+    font-size: 1.8rem;
+  }
+
+  .last-part p {
+    font-size: 1.1rem;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  #footer p {
+    font-size: 0.9rem;
+    position: relative;
+    left: -1rem;
+    top: 0.4rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .intro-content h2 {
+    font-size: 3.3rem;
+  }
+
+  #footer p {
+    font-size: 0.9rem;
+    position: relative;
+    left: -1rem;
+    top: 0.4rem;
+  }
+
+  .last-part p {
+    font-size: 1.1rem;
+    position: relative;
+   
+    left: 50rem;
+    bottom: 5rem;
+  }
+
+  .to-projects {
+    position: relative;
+    bottom: 5rem;
+    left: 3rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  
+}
+
+@media (min-width: 642px) and (max-width: 1024px) {
+  .last-part p {
+    position: static;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .last-part p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    position: relative;
+    max-width: 50rem;
+    left: 80%;
+    transform: translateX(-50%);
+  }
+
+  .to-projects {
+    position: relative;
+    bottom: 5rem;
+    left: 3rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .footer-nav {
+   font-size: 1.5rem;
+  }
+  
+  .footer-nav ul {
+    gap: 3rem;
+  }
+
+  #footer p {
+    font-size: 1.4rem;
+    position: relative;
+    left: -1rem;
+    bottom: 0.1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  #footer p {
+    font-size: 1.2rem;
+    position: relative;
+    left: -1rem;
+    bottom: 0.1rem;
+  }
+
+  .to-projects {
+    position: relative;
+    bottom: 5rem;
+    left: -1rem;
+  }
+
+}
