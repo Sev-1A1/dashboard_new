@@ -134,19 +134,21 @@ body {
     z-index: auto;
   }
 
-  .small-wedo h3,
+  .small-wedo h3 {
+    font-size: 0.7rem;
+  }
   .small-wedo h4 {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
 
   .small-wedo p {
-    width: 100%;
+   white-space: normal;
     margin-left: 0;
     position: static;
     bottom: auto;
-    margin-top: 5rem;
-    text-align: left;
-    font-size: 0.8rem;
+    margin-top: 4.6rem;
+    min-width: 80vh;
+    font-size: 0.5rem;
   }
 
   .work-list ul {
@@ -157,6 +159,7 @@ body {
 
   .work-list li {
     width: 100%;
+    padding: 0.2rem;
   }
 
   .work-list li h3,
@@ -286,13 +289,17 @@ body {
   .get-in-touch-below {
     position: relative;
     top: 1.5rem;
+    font-size: 0.6rem;
   }
 
+  
+
   .small-wedo p {
-    white-space: normal;
+    white-space: nowrap;
     padding: auto;
+    max-width: 80%;
+    max-height: 100px;
     font-size: 0.6rem;
-    text-align: left;
     position: relative;
     bottom: 2.5rem;
   }
@@ -302,6 +309,12 @@ body {
     bottom: 5rem;
     left: 9rem;
     margin-top: 1rem;
+  }
+
+  .last-part p {
+    font-size: 0.6rem;
+    line-height: 1.2;
+    text-align: left;
   }
 
   .icons {
